@@ -117,38 +117,6 @@
 </section>
 <section id="meet">
     <div class="container">
-        <?php
-
-        $sliders = array(
-            'post_type' => 'slider',
-            'posts_per_page' => 3,
-            'order' => 'DSC'
-        );
-        $active_slider = 1;
-        $sliders_loop = new WP_Query($sliders);
-        while ($sliders_loop->have_posts()) : $sliders_loop->the_post();
-            ?>
-            <div class="item <?php echo $active_slider==1?'active':'' ?>">
-                <?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
-                <div class="carousel-caption headings">
-                    <h3 class="creb" data-animate="fadeInUp" data-animation-delay="500"><b >
-                            <?php
-                            $string=get_the_title();
-                            ?>
-                            <?php echo wordwrap($string,25,"<br>"); ?></b>
-                    </h3>
-                    <p class="creb animated fadeInDown" data-animate="fadeInDown" data-animation-delay="800" style="animation-delay: 800ms;">
-                        <?php
-                        $paragr=get_the_excerpt();
-                        ?>
-                        <?php echo wordwrap($paragr,65,"<br>"); ?></b>
-                    </p>
-                </div>
-            </div>
-            <?php
-            $active_slider =$active_slider+1;
-        endwhile;
-        ?>
         <div class="col-md-6">
             <h1><?=$welcome_message_title;?></h1>
             <p><?=$welcome_message?></p>
@@ -177,28 +145,31 @@
 <section id="boxer">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <a href="">
-                    <div class="box">
-                        <img class="img-responsive" src="images/box-1.jpg" alt="" />
-                        <div class="text-content">
-                            <h4>Life is not black and roases </h4>
-                            <p>Life is not black and roases </p>
+            <?php
+            $page_banner_list = array(
+                'post_type' => 'page_banner',
+                'posts_per_page' => 2,
+                'order' => 'DSC'
+            );
+            $page_banner_list_loop = new WP_Query($page_banner_list);
+            while ($page_banner_list_loop->have_posts()) : $page_banner_list_loop->the_post();
+                ?>
+                <div class="col-md-6">
+                    <a href="<?php echo get_the_excerpt(); ?>">
+                        <div class="box">
+                            <?php
+                            echo the_post_thumbnail( 'full', array( 'class' => 'img-responsive' ) );
+                            ?>
+                            <div class="text-content">
+                                <h4><?php the_title();?></h4>
+                                <p><?=get_the_content();?></p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6">
-                <a href="#">
-                    <div class="box">
-                        <img class="img-responsive" src="images/box-3.jpg" alt="" />
-                        <div class="text-content">
-                            <h4>Life is not black and roases </h4>
-                            <p>Life is not black and roases </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
+                <?php
+            endwhile;
+            ?>
         </div>
     </div>
 </section>

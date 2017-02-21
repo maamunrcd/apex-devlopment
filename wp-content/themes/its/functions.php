@@ -1,7 +1,7 @@
 <?php
 
 /* =====
- * Code for Main_menu_functions  
+ * Code for Main_menu_functions
   ====== */
 
 function its_holydays_functions() {
@@ -15,7 +15,7 @@ add_action('after_setup_theme', 'its_holydays_functions');
 
 
 /* * ****
- * Add Metabox For Post 
+ * Add Metabox For Post
  * **** */
 
 function post_metabox() {
@@ -42,7 +42,7 @@ function save_post_meta_to_post($post_id) {
 add_action('save_post', 'save_post_meta_to_post');
 
 /* * ****
- * End Metabox For Post Code 
+ * End Metabox For Post Code
  * **** */
 
 
@@ -56,7 +56,7 @@ add_action('save_post', 'save_post_meta_to_post');
 
 /*
  * Code for Create Custom Post Type
- * Post type is ==> our_partners_client 
+ * Post type is ==> our_partners_client
  */
 
 function our_partners_client() {
@@ -83,7 +83,7 @@ function our_partners_client_meta_box() {
 
 /*
  * Code for create Custom Post Type
- * Post Type==>Our Partners and Cient End 
+ * Post Type==>Our Partners and Cient End
  */
 
 
@@ -95,7 +95,7 @@ function our_partners_client_meta_box() {
 
 /*
  * Code for Create Custom Post Type
- * Post type is ==> Paper Add Start 
+ * Post type is ==> Paper Add Start
  */
 
 function paper_add() {
@@ -301,7 +301,7 @@ function management_meta_box() {
 
 
 /* * ****
- * Add Metabox For Packges Post 
+ * Add Metabox For Packges Post
  * **** */
 
 function mamagement_metabox() {
@@ -349,7 +349,7 @@ add_action('save_post', 'save_management_meta_to_post');
 
 /*
  * Code for Create Custom Post Type
- * Post type is ==>Packeges 
+ * Post type is ==>Packeges
  */
 
 function all_packeges() {
@@ -559,7 +559,7 @@ function accept_image_meta_box() {
 add_action('admin_head', 'accept_image_meta_box');
 
 /*
- * Create Custom Post Type we accept logo 
+ * Create Custom Post Type we accept logo
  * Post type is ==> we_accept End
  */
 
@@ -606,7 +606,7 @@ add_action('admin_head', 'client_logo_excerpt');
 add_action('admin_head', 'client_logo_image_meta_box');
 
 /*
- * Create Custom Post Type we accept logo 
+ * Create Custom Post Type we accept logo
  * Post type is ==> we_accept End
  */
 
@@ -618,7 +618,7 @@ add_action('admin_head', 'client_logo_image_meta_box');
 
 /*
  * widget for welcome message
- * 
+ *
  */
 
 function itsholydays_Widgets_init() {
@@ -720,7 +720,7 @@ add_action('init', 'photo_gallery');
 
 
 /* * ****
- * Add Metabox For Country Inso 
+ * Add Metabox For Country Inso
  * **** */
 
 function photo_gallery_metabox_include() {
@@ -800,7 +800,7 @@ function visa_info_thum_meta_box() {
 
 
 /* * ****
- * Add Metabox For Country Inso 
+ * Add Metabox For Country Inso
  * **** */
 
 function visa_info_metabox() {
@@ -869,7 +869,7 @@ function load_admin_styles() {
 }
 
 /* =====
- * Code for Custom Post Search Query  
+ * Code for Custom Post Search Query
   ====== */
 
 function searchfilter($query) {
@@ -881,7 +881,7 @@ function searchfilter($query) {
 
 add_filter('pre_get_posts', 'searchfilter');
 /* =====
- * Code for Custom Post Search Query  
+ * Code for Custom Post Search Query
   ====== */
 
 
