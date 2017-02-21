@@ -1,4 +1,14 @@
-<?php include("header.php");?>
+<?php
+/*
+ * Template Name: home
+ *
+ * The template for Home Page
+ *
+ * This is the template that displays Home Page.
+ *
+ */
+get_header();
+?>
 
 <!-- Intro Section -->
 <section id="slider" class="creb" data-animate="fadeInUp" data-animation-delay="100">
@@ -201,4 +211,6 @@
 </section>
 
 <!-- footer -->
-<?php include("footer.php");?>
+<?php
+get_footer();
+?>

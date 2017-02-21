@@ -231,6 +231,8 @@ a.navbar-brand img {
 	overflow: hidden;
 	background: none;
 	box-sizing: border-box;
+	max-height: 200px;
+	min-height: 200px;
 }
 
 .box {
