@@ -8,6 +8,7 @@
  *
  */
 get_header();
+if (have_posts()) : while (have_posts()) : the_post();
 ?>
     <section id="google-map">
 		<div id="map">
@@ -25,6 +26,7 @@ get_header();
 				<div class="col-sm-4"></div>
 			</div>
 			<div class="row">
+				<form action="">
 				<div class="col-md-4">
 					<h3>Corporate Headquarters</h3>
 					<ul class="list-unstyled">
@@ -41,40 +43,16 @@ get_header();
 					</ul>
 
 				</div>
-				<div class="col-md-8">
-					<div class="row">
-					<div class="col-sm-6">
-						<div class="form-group">
-							<input type="text" class="form-control form-controler" id="name" placeholder="Enter name" required="required" />
-						</div>
-					</div>
-					<div class="col-sm-6">
-						<div class="form-group">
-							<input type="email" class="form-control form-controler" id="exampleInputEmail1" placeholder="Email">
-						</div>
-					</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12">
-							<div class="form-group">
-								<textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
-												placeholder="Message"></textarea>
-							</div>
-						</div>
-					</div>
-				</div>
-						
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<button type="submit" class="btn btn-primary pull-right" id="btnContactUs">Send Message</button>
-				</div>
+					<?php the_content(); ?>
+
 			</div>
 		</div>
 	</section>
 
 <!-- footer -->
 <?php
+endwhile;
+endif;
 get_footer();
 ?>
 

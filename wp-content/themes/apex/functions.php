@@ -236,4 +236,3 @@ function page_banner_url() {
 }
 add_action('admin_head', 'page_banner_meta_box');
 add_action('admin_head', 'page_banner_url');
-
